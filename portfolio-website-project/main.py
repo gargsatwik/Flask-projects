@@ -16,9 +16,6 @@ year = datetime.datetime.now().year
 Bootstrap5(app)
 MY_EMAIL = os.environ.get('MY_EMAIL')
 PASSWORD = os.environ.get('PASSWORD')
-OPEN_AI_API_KEY = "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"
-BEARER_TOKEN = "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"
-# client = OpenAI(api_key=OPEN_AI_API_KEY)
 
 
 class ContactForm(FlaskForm):
