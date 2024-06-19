@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Satwik's Blogsite</title>
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- Your custom CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+{% include "header.html" %}
+ <div class="row featurette" style="margin-bottom: 60px">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">The programming journey so far!!</h2>
+        <p class="lead">Proficient in C, C++ and python. Built a lot of projects using various python libraries. Exploring Web Development using Flask framework.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="static/images/IMG_4348.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="450" height="350" role="img" aria-label="Placeholder: 500x500"><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect>
+      </div>
+    </div>
+        <hr class="featurette-divider">
+<!--    <div class="row featurette">-->
+<!--      <div class="col-md-7">-->
+<!--        <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>-->
+<!--        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>-->
+<!--      </div>-->
+<!--      <div class="col-md-5">-->
+<!--        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(&#45;&#45;bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(&#45;&#45;bs-secondary-color)" dy=".3em">500x500</text></svg>-->
+<!--      </div>-->
+<!--    </div>-->
+{% include "footer.html" %}
+<!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

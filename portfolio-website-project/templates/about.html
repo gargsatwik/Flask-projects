@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Satwik's Website</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <!-- Your custom CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    {% include "header.html" %}
+    <h1>About me</h1>
+        <div style="padding: 40px,">
+    <p >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquam, erat at porta molestie, mauris enim feugiat leo, quis luctus diam nisi nec mauris. Suspendisse tincidunt ultricies neque, nec imperdiet velit dapibus id. Aliquam erat volutpat. Pellentesque tincidunt, enim non venenatis laoreet, sem metus cursus neque, ac facilisis ex erat eu purus. Curabitur consequat lacus lacus, ac aliquet ex porttitor at. Aliquam venenatis, diam nec tincidunt elementum, orci dolor ornare turpis, vitae tempus ipsum arcu id sem. Praesent blandit egestas massa, quis sodales lacus ullamcorper ac. Phasellus eget ipsum in nisl scelerisque malesuada quis bibendum orci. Aenean eget faucibus nulla. Ut ut efficitur elit. Ut nulla urna, suscipit in nunc sed, lacinia hendrerit sem. Morbi venenatis justo id arcu tempor sollicitudin. Etiam nunc augue, lobortis porttitor tincidunt in, rutrum molestie nulla. Duis vel lacinia justo.
+
+Duis non urna id justo bibendum efficitur. Vestibulum nec bibendum tortor, posuere porttitor tellus. Morbi dignissim venenatis arcu quis consectetur. Quisque sed lacus a nunc consequat hendrerit. Curabitur eu orci turpis. Sed luctus faucibus egestas. Morbi suscipit mauris quis massa mollis venenatis nec vitae augue.
+
+Sed varius a lectus sed convallis. Pellentesque tincidunt gravida arcu, ut dignissim odio commodo et. Maecenas ut mauris elementum, rutrum odio vulputate, suscipit risus. Nulla mauris ex, consequat in purus et, tempus egestas ipsum. Morbi ac nibh sodales, placerat libero id, ultricies sapien. Aliquam erat odio, bibendum ut maximus ac, molestie pulvinar quam. Vestibulum eget erat neque. Proin et pretium risus, ut mattis enim. Phasellus congue, est sed varius ullamcorper, felis massa pulvinar nulla, tristique pulvinar elit dolor mattis urna. Etiam sit amet odio malesuada quam ullamcorper tincidunt. Duis a dictum massa. Maecenas faucibus sem at feugiat dignissim. Mauris venenatis, odio a ultrices commodo, libero ante tincidunt ante, vitae hendrerit tortor sem fermentum ex. Ut consectetur lectus a suscipit ornare. Aliquam erat volutpat. Nullam vel lectus a libero congue vestibulum eget nec felis.
+    </p>
+        </div>
+    {% include "footer.html" %}
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-body-secondary">© {{ year }} Satwik Garg</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-body-secondary" href="www.linkedin.com/in/satwik-garg-6602552a6" target="_blank"><img class="personal-handles" src="{{ url_for('static', filename='images/linkedin-icon.jpeg') }}" alt="Logo"></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://twitter.com/gargsatwik05" target="_blank"><img class="personal-handles" src="{{ url_for('static', filename='images/X_icon_2.svg') }}" alt="Logo"></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/gargsatwik/" target="_blank"><img class="personal-handles" src="{{ url_for('static', filename='images/instagram-icon.png') }}" alt="Logo" ></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/satwik.garg.7" target="_blank"><img class="personal-handles" src="{{ url_for('static', filename='images/facebook-icon.png') }}" alt="Logo"></a></li>
+    </ul>
+  </footer>
+    </div>
+</footer>

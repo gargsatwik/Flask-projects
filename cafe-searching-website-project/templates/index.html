@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cafe and Wi-Fi</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8f+ua7Kw1TIqKw1T2uRFrFRc9IOYX7jDzUlFjfn65VsyjJ8yVY4IkKvfMjq6" crossorigin="anonymous">
+    <!-- Load Bootstrap-Flask CSS here -->
+    {{ bootstrap.load_css() }}
+    <style>
+        .card-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin: 0 auto;
+          width: 80%;
+        }
+
+        .card {
+          width: calc(33.33% - 10px);
+          margin: 5px;
+          border: 1px solid #ddd;
+          background-color: #fff;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+{% include "header.html" %}
+{% for cafe in all_cafes: %}
+    <div class="col">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="{{ cafe.img_url }}" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+            <div class="card-body">
+              <div style="padding: 16px">
+                  <h3>{{ cafe.name }}</h3>
+                  <h5>{{ cafe.location }}</h5>
+                  <div>
+                      <p>Seats: {{ cafe.seats }}</p>
+                      {% if cafe.has_toilet: %}
+                      <p>
+                          Toilet: Available
+                      </p>
+                      {% else: %}
+                      <p>
+                          Toilet: Unavailable
+                      </p>
+                      {% endif %}
+                      {% if cafe.has_wifi: %}
+                      <p>WiFi: Available</p>
+                      {% else: %}
+                      <p>WiFi: Unavailable</p>
+                      {% endif %}
+                      {% if cafe.has_sockets: %}
+                      <p>Sockets: Available</p>
+                      {% else: %}
+                      <p>Sockets: Unavailable</p>
+                      {% endif %}
+                      {% if cafe.can_take_calls: %}
+                      <p>Calls: Allowed</p>
+                      {% else: %}
+                      <p>Calls: Not Allowed</p>
+                      {% endif %}
+                  </div>
+                  <h4>Coffee Price:{{ cafe.coffee_price }}$</h4>
+                  <a href="{{ cafe.map_url }}">{{ cafe.map_url }}</a>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <form method="POST" action="{{ url_for('edit', to_edit=cafe.id) }}">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    </form>
+                    <form method="POST" action="{{ url_for('delete', to_delete=cafe.id) }}">
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+{% endfor %}
+{% include "footer.html" %}
+</body>
+</html>

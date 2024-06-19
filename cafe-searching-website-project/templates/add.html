@@ -1,0 +1,38 @@
+{% from "bootstrap5/form.html" import render_form %}
+<head>
+    <meta charset="UTF-8">
+    <title>Cafe and WiFi</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8f+ua7Kw1TIqKw1T2uRFrFRc9IOYX7jDzUlFjfn65VsyjJ8yVY4IkKvfMjq6" crossorigin="anonymous">
+     <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    {% include "header.html" %}
+    {% if edit: %}
+    <h1>Edit cafe details</h1>
+    {% endif %}
+    {% if not edit: %}
+    <h1>Add a new cafe</h1>
+    {% endif %}
+    <div class="container mt-4">
+        <form method="POST">
+            {{ render_form(form) }}
+            {{ form.csrf_token }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    {% include "footer.html" %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXlF2VvKpGHLms4QnNHmatsF06P82rxpS+ILYp5hOg8ifHBW8bka58p0Twic" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgSNMFohC+3J5i5qLJ4r0iA4kw5atR87ZhI+SmH97F+5xf2XP7B" crossorigin="anonymous"></script>
+</body>

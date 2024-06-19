@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cafe&Wifi API</title>
+</head>
+<body>
+    <h1>Welcome to the Cafe & Wifi API</h1>
+    <div>
+        <h2>You can perform the following actions</h2>
+        <ul>
+            <li><a href="{{url_for('random')}}">Find a random Cafe</a></li>
+            <li><a href="{{url_for('all_cafes')}}">All cafes</a></li>
+            <li><a href="{{url_for('post_new_cafe')}}">Add a cafe</a></li>
+            <p>
+                With specific information about a cafe you can also update it's details and remove the cafe from the list.
+                Also you can search for a cafe at a particular location with it's id.
+            </p>
+        </ul>
+    </div>
+</body>
+</html>
